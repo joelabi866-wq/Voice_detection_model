@@ -18,7 +18,26 @@
     <option value="issue">Issue</option>
   </select>
 
+  <!-- Dynamic fields -->
   <form id="dynamicForm"></form>
+
+  <!-- 🔥 NEW: Voice Input Section -->
+  <div class="voice-section">
+    <label>Voice Input</label>
+
+    <div class="voice-control">
+      <textarea
+        id="voiceText"
+        placeholder="Click the mic and speak..."
+        rows="4"
+      ></textarea>
+
+      <!-- 🎤 Mic Button -->
+      <button type="button" id="micBtn" title="Record voice">
+        🎤
+      </button>
+    </div>
+  </div>
 
   <button id="generateBtn">Generate Description</button>
 
