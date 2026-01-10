@@ -3,6 +3,9 @@ from typing import Optional, List, Union
 from enum import Enum
 
 
+# -----------------------------
+# ENUMS (restrict allowed values)
+# -----------------------------
 class EntityType(str, Enum):
     review = "review"
     rfa = "rfa"
@@ -13,6 +16,9 @@ class GenerationMode(str, Enum):
     ai = "ai"
 
 
+# -----------------------------
+# ENTITY SCHEMAS
+# -----------------------------
 class ReviewFields(BaseModel):
     name: str
     start_date: str
@@ -49,13 +55,23 @@ class IssueFields(BaseModel):
     actual_cost: Optional[float] = None
 
 
+# -----------------------------
+# API REQUEST / RESPONSE MODELS
+# -----------------------------
 class GenerationRequest(BaseModel):
+    """
+    Incoming request from frontend.
+    Depending on entity_type, fields will match ReviewFields, RFAFields, or IssueFields.
+    """
     entity_type: EntityType
     generation_mode: GenerationMode = GenerationMode.ai
     fields: Union[ReviewFields, RFAFields, IssueFields]
 
 
 class GenerationResponse(BaseModel):
+    """
+    Standard response returned by the generation endpoint.
+    """
     success: bool
     generated_description: str
     generation_mode: GenerationMode

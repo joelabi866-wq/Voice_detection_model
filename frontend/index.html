@@ -1,52 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
   <title>AI Description Generator</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<div class="container">
+<div class="card">
   <h2>AI Description Generator</h2>
 
   <label>Entity Type</label>
   <select id="entityType">
-    <option value="">Select</option>
     <option value="review">Review</option>
-    <option value="rfa">RFA</option>
     <option value="issue">Issue</option>
+    <option value="rfa">RFA</option>
   </select>
 
-  <!-- Dynamic fields -->
-  <form id="dynamicForm"></form>
+  <label>Name</label>
+  <input id="name" placeholder="Enter name" />
 
-  <!-- 🔥 NEW: Voice Input Section -->
-  <div class="voice-section">
-    <label>Voice Input</label>
+  <label>Description (Mic Input)</label>
+  <textarea id="description" rows="4"></textarea>
 
-    <div class="voice-control">
-      <textarea
-        id="voiceText"
-        placeholder="Click the mic and speak..."
-        rows="4"
-      ></textarea>
+  <button class="mic-btn" onclick="recordVoice()">🎤 Speak</button>
+  <button onclick="generate()">Generate Description</button>
 
-      <!-- 🎤 Mic Button -->
-      <button type="button" id="micBtn" title="Record voice">
-        🎤
-      </button>
-    </div>
-  </div>
-
-  <button id="generateBtn">Generate Description</button>
-
-  <div class="output">
-    <h3>Generated Description</h3>
-    <p id="result"></p>
-  </div>
+  <div class="output" id="result"></div>
 </div>
 
-<script src="script.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

@@ -1,105 +1,41 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  background: #f4f6f8;
+  padding: 30px;
 }
 
-.container {
-  width: 600px;
-  margin: 40px auto;
-  background: #fff;
+.card {
+  background: white;
   padding: 20px;
-  border-radius: 6px;
+  width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-label {
-  margin-top: 10px;
-  display: block;
-  font-weight: bold;
-}
-
-input, select, textarea {
+input, textarea, select, button {
   width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 14px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 10px;
-  width: 100%;
-  background: #2563eb;
-  color: white;
-  border: none;
   cursor: pointer;
-  border-radius: 4px;
 }
 
-button:hover {
-  background: #1e40af;
+.mic-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+}
+
+.mic-btn:hover {
+  background: #0056b3;
 }
 
 .output {
-  margin-top: 20px;
-  background: #f1f5f9;
-  padding: 15px;
-  border-radius: 4px;
-}
-
-/* ================================
-   🎤 VOICE INPUT STYLES
-================================ */
-
-.voice-section {
-  margin-top: 20px;
-}
-
-.voice-control {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.voice-control textarea {
-  flex: 1;
-  resize: vertical;
-}
-
-/* Mic Button */
-#micBtn {
-  width: 50px;
-  height: 50px;
-  font-size: 22px;
-  background: #16a34a; /* green */
-  border-radius: 50%;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#micBtn:hover {
-  background: #15803d;
-  transform: scale(1.05);
-}
-
-/* Recording state */
-#micBtn.recording {
-  background: #dc2626; /* red */
-  animation: pulse 1.2s infinite;
-}
-
-/* Pulse animation */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(220, 38, 38, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
-  }
+  margin-top: 15px;
+  background: #eef;
+  padding: 10px;
+  border-radius: 6px;
 }

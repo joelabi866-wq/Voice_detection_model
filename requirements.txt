@@ -1,10 +1,27 @@
+# Core API
 fastapi
 uvicorn
+
+# Data validation & settings
 pydantic
 pydantic-settings
 python-dotenv
+
+# AI providers
 openai
 google-generativeai
 httpx
+
+# Voice / Audio processing
+openai-whisper
+ffmpeg-python
+
+# Async & utilities
+asyncio
+
+# Testing
 pytest
 pytest-asyncio
+
+# Optional (recommended)
+python-multipart
